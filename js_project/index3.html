@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.tailwindcss.com">
+
+</script>
+<body>
+    <div class="=p-5">
+        <button  class="bg-blue-600 text-white p-1 bg-yellow-400 py-2 rounded-lg hover:bg-yellow-500 transition" onclick="showhide()">Click Here
+        </button>
+        <p id="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Facilis sunt unde accusantium animi delectus soluta architecto? 
+            Ullam, deleniti? Recusandae deleniti incidunt ducimus quasi rem velit expedita atque assumenda sint aliquid!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Facilis sunt unde accusantium animi delectus soluta architecto? 
+            Ullam, deleniti? Recusandae deleniti incidunt ducimus quasi rem velit expedita atque assumenda sint aliquid!
+        </p>
+    </div>
+    <div class="flex align-center justify-center">
+        <button id="magic" class="bg-blue-600 text-white p-1 py-2 rounded-lg hover:bg-yellow-500 transition " onclick="magic()">magic button
+        </button>
+    </div>
+   <script>
+    function showhide(){
+        document.getElementById('content').classList.toggle('hidden');
+    }
+    function magic(){
+        document.getElementById('magic').classList.add('hidden');
+    }
+   </script> 
+</body>
+</html>

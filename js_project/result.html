@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.percentage.com</title>
+    <script src="https://cdn.tailwindcss.com">
+
+    </script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<style>
+    body{
+        background: url('ok.png');
+    }
+</style>
+<body class="flex items-center justify-center bg-gray-100 p-4 mt-10">
+    <div class=" bg-white shadow-lg w-full p-8 rounded-xl max-w-sm">
+        <h2 class="text-center font-bold text-2xl mb-6">Percentage calculator</h2>
+        <form>
+            <input type="text" id="english" placeholder="Enter English marks" class="w-full mb-4 p-2 px-4 rounded-lg border border-gray-300">
+            <input type="text"id="math" placeholder="Enter math marks" class="w-full mb-4 p-2 px-4 rounded-lg border border-gray-300">
+            <input type="text"id="science" placeholder="Enter science marks" class="w-full mb-4 p-2 px-4 rounded-lg border border-gray-300">
+
+            <input type="text" id="total" placeholder="Result:-" class="mb-4 py-2 text-center">
+            <button type="submit" onclick="percentage()" class="w-full font-bold bg-green-400 py-2 rounded-lg hover:bg-green-500 transition">calculate percentage</button>
+        </form>
+    </div>
+<script>
+    function percentage()
+    {
+        let english = document.getElementById('english').value;
+        let math = document.getElementById('math').value;
+        let science = document.getElementById('science').value;
+        let sum = Number(english) + Number(math) + Number(science);
+        let per = sum / 100;
+        document.getElementById('total').value = "the sum is " + total;
+    }
+</script>
+</body>
+</html>

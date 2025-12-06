@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator.com</title>
+    <script src="https://cdn.tailwindcss.com">
+        
+    </script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body class="flex items-center justify-center bg-gray-100 mt-10">
+    <div class=" bg-white shadow-lg px-10 py-4 w-2/3 rounded-lg text-center max-w-sm">
+        <h2 class="text-center font-bold text-2xl mb-6">Simple calculator</h2>
+        <input type="text" id="first" placeholder="Enter your first number" class="w-full mb-4 p-2 my-2 rounded-lg border border-gray-300">
+        <input type="text" id="second" placeholder="Enter second number" class="w-full mb-4 p-2 my-2 rounded-lg border border-gray-300">
+      <input type="text" id="total" placeholder="total here" class="mb-4 py-2">
+        <div class="flex gap-4">
+            <button type="submit" onclick="sum()"  class="w-full font-bold bg-yellow-400 py-2 rounded-lg hover:bg-yellow-500 transition">Add</button>
+            <button type="submit" onclick="sub()" class="w-full font-bold bg-yellow-400 py-2 rounded-lg hover:bg-yellow-500 transition">Sub</button>
+            <button type="submit" onclick="mul()" class="w-full font-bold bg-yellow-400 py-2 rounded-lg hover:bg-yellow-500 transition">multiply</button>
+            <button type="submit" onclick="div()" class="w-full font-bold bg-yellow-400 py-2 rounded-lg hover:bg-yellow-500 transition">divide</button>
+        </div>
+    </div>
+
+    <script>
+        function sum()
+        {
+            let first = document.getElementById('first').value;
+            let second = document.getElementById('second').value;
+            let total = Number(first) + Number(second);
+            document.getElementById('total').value = "the sum is " + total;
+        }
+        function mul()
+        {
+            let first = document.getElementById('first').value;
+            let second = document.getElementById('second').value;
+            let total = Number(first) * Number(second);
+            document.getElementById('total').value = "the product is " + total;
+        }
+        function sub()
+        {
+            let first = document.getElementById('first').value;
+            let second = document.getElementById('second').value;
+            let total = Number(first) - Number(second);
+            document.getElementById('total').value = "the difference is " + total;
+        }
+        function div()
+        {
+            let first = document.getElementById('first').value;
+            let second = document.getElementById('second').value;
+            let total = Number(first) / Number(second);
+            total = total.toFixed(2);
+            document.getElementById('total').value = "the quotient is " + total;
+        }
+        
+    </script>
+</body>
+</html>
