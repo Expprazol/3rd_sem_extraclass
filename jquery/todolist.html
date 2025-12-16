@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex h-screen bg-blue-400 justify-center items-center">
+        <div class="bg-white p-4 rounded-lg shadow-md">
+             <div>
+        <input class="border border-gray-300 rounded px-1 w-64" type="text" id="taskInput" placeholder="Enter a new task">
+        <button class="bg-blue-400 text-white py-1 px-4 rounded ml-2" id="addTaskButton">Add Task</button>
+    </div>
+    <ul class="mt-4">
+
+    </ul>
+        </div>
+    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+     $(document).ready(function() {
+          $('button').click(function() {
+                $li = $('<li class="border-b border-gray-200 py-2"></li>');
+                const task = $('input').val();
+                if (task) {
+                   $('ul').append($li.text(task));
+                     $('input').val('');
+                }
+          });
+     });
+    </script>
+
+</body>
+</html>
