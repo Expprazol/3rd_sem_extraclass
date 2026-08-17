@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <div class="flex">
-        <div class="w-52 h-screen bg-gray-100">
-            <h2 class="text-center mt-5 font-bold text-2xl">login</h2>
-            <nav class="mt-4">
-                <a href="dashboard.html" class="hover:bg-gray-200 border-b p-3 text-lg block ">dashboard</a>
-                  <a href="categories.html" class="hover:bg-gray-200 border-b p-3 text-lg block ">Categories</a>
-                    <a href="" class="hover:bg-gray-200 border-b p-3 text-lg block ">product</a>
-                      <a href="" class="hover:bg-gray-200 border-b p-3 text-lg block ">Customers</a>
-                        <a href="" class="hover:bg-gray-200 border-b p-3 text-lg block ">orders</a>
-                          <a href="" class="hover:bg-gray-200 border-b p-3 text-lg block ">settings</a>
-                          <a href="" class="hover:bg-gray-200 border-b p-3 text-lg block ">logout</a>
-
-            </nav>
-        </div>
-
- <div class="p-4 flex-1">
-            <h2 class="font-bold text-2xl">dashboard</h2>
-            <hr class=" h-1 bg-red-600">
-            <p>Rest of the content</p>
-        </div>
-        </div>
-</body>
-</html>
+<?php include 'includes/header.php'; ?>
+            <div>
+                <h2 class="font-bold text-3xl">Dashboard</h2>
+                <hr class="h-1 bg-red-600">
+                <div class="grid grid-cols-4 gap-4 mt-4">
+                    <div class="bg-blue-100 p-4 rounded-xl">
+                        <h3 class="text-xl font-bold">Total Categories</h3>
+                        <p class="text-3xl font-bold mt-2 text-right">10</p>
+                    </div>
+                    <div class="bg-red-100 p-4 rounded-xl">
+                        <h3 class="text-xl font-bold">Total News</h3>
+                        <p class="text-3xl font-bold mt-2 text-right">100</p>
+                    </div>
+                    <div class="bg-green-100 p-4 rounded-xl">
+                        <h3 class="text-xl font-bold">Total Users</h3>
+                        <p class="text-3xl font-bold mt-2 text-right">50</p>
+                    </div>
+                    <div class="bg-yellow-100 p-4 rounded-xl">
+                        <h3 class="text-xl font-bold">Total Comments</h3>
+                        <p class="text-3xl font-bold mt-2 text-right">200</p>
+                    </div>
+                </div>
+            </div>
+<?php include 'includes/footer.php'; ?>
